@@ -1,0 +1,62 @@
+.wishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.wishes-wrapper {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.wishes-wrapper img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.wishes-wrapper h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.wishes-wrapper p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.wishes-wrapper a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7000ffff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.wishes-wrapper a:hover {
+  background: rgb(90, 1, 207);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .wishes-wrapper {
+    padding: 20px;
+  }
+
+  .wishes-wrapper h2 {
+    font-size: 18px;
+  }
+
+  .wishes-wrapper p {
+    font-size: 14px;
+  }
+}

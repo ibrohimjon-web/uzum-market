@@ -1,0 +1,73 @@
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: black;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+.login-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.login-message {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-wrapper input {
+  width: 250px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+}
+
+.login-send {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #ff4081;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-send:hover {
+  background: #e73370;
+}
+
+.login-asosiysahifa {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .login-wrapper input {
+    width: 200px;
+    font-size: 16px;
+  }
+
+  .login-title {
+    font-size: 18px;
+  }
+
+  .login-message {
+    font-size: 14px;
+  }
+}

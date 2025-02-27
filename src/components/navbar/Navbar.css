@@ -1,0 +1,366 @@
+/* NAVBAR TOP-START */
+/* Navbar asosiy stil */
+.color-pink {
+  color: #7000ffff !important;
+}
+
+.navbar-top {
+  background: #f8f9fa;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.navbar-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Chap tomon (joylashuv va punkt) */
+.navbar-top-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-top-left a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-top-left a:hover {
+  color: #007bff;
+}
+
+/* O'ng tomon */
+.navbar-top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-top-right a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navbar-top-right a:hover {
+  color: #007bff;
+}
+
+/* Til tanlash (Dropdown uslubi) */
+.navbar-top-right-chose-lang {
+  position: relative;
+  cursor: pointer;
+}
+
+.selected-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+}
+
+.selected-lang img {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Dropdown menyusi */
+.language-dropdown {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 140px;
+  z-index: 10;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.language-option img {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.language-option:hover {
+  background: #f0f0f0;
+}
+
+
+@media (max-width: 1000px) {
+  .navbar-top {
+    display: none;
+  }
+}
+
+
+
+/* NAVBAR-MIDDLE-START */
+
+.navbar-middle {
+  padding: 30px 0;
+}
+
+.navbar-middle-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-middle-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-middle-logo-link {
+  display: flex;
+}
+
+.navbar-middle-btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+  gap: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e5e5ffff;
+  color: #7000ffff;
+  font-size: 16px;
+}
+
+.navbar-middle-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.navbar-middle-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  text-indent: 15px;
+  border-radius: 4px;
+}
+
+.navbar-middle-search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 55px;
+  font-size: 18px;
+  border-radius: 0 4px 4px 0;
+  border: none;
+}
+
+.navbar-middle-collection {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  z-index: 999;
+  margin-left: 20px;
+}
+
+.navbar-middle-collection li a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+.navbar-middle-collection-icon {
+  font-size: 22px;
+}
+
+.navbar-middle-collection-phone {
+  display: none;
+  color: grey;
+  cursor: pointer;
+  align-items: center;
+  list-style: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-middle-collection-phone li a {
+  display: flex;
+  flex-direction: column;
+  color: rgb(135, 135, 135);
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-middle-collection-phone-icon {
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* MEDIA */
+@media (max-width: 1198px) {
+  .navbar-middle-collection span {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .navbar-bottom {
+    display: none;
+  }
+
+  .navbar-middle-search {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: -50px;
+  }
+  .navbar-middle-collection-phone {
+    margin-left: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 999;
+    justify-content: space-between;
+    padding: 0 4%;
+    align-items: center;
+    background-color: white;
+    border: 1px solid grey;
+    width: 100%;
+    height: 70px;
+  }
+
+  .navbar-middle-wrapper {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .navbar-middle-logo-link {
+    margin-bottom: 30px;
+    padding: 0;
+  }
+
+  .navbar-middle-btn {
+    display: none;
+  }
+
+  .navbar-middle-collection li a {
+    color: white;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-middle-collection-phone-icon {
+    font-size: 30px;
+  }
+  .navbar-middle-collection-phone li a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-middle-collection-phone-icon {
+    font-size: 24px;
+  }
+  .navbar-middle-collection-phone li a {
+    font-size: 14px;
+  }
+}
+
+
+/* NAVBAR BOTTOM */
+
+/* Navbar pastki qismi */
+.navbar-bottom {
+  background: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.navbar-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Aksiya bo'limi */
+.navbar-bottom-aksiya-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-bottom-aksiya-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-bottom-aksiya-link a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar-bottom-aksiya-link img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Kategoriya bo'limi */
+.navbar-bottom-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-bottom-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar-bottom-links li a:hover {
+  color: #007bff;
+}
