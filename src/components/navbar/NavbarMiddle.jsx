@@ -1,14 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { CiHeart, CiSearch, CiUser } from "react-icons/ci";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoBagOutline, IoHomeOutline } from "react-icons/io5";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { RiMenuSearchLine } from "react-icons/ri";
 import { TfiBag } from "react-icons/tfi";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import navbarLogo from "../../assets/UzumUz.svg";
 
 const NavbarMiddle = () => {
+  const cartItems = useSelector((state) => state.carts.value);
+  const dispatch = useDispatch();  
+
   return (
     <div className="navbar-middle">
       <div className="container">
@@ -51,7 +55,9 @@ const NavbarMiddle = () => {
             <li>
               <Link to="/cart">
                 <IoBagOutline className="navbar-middle-collection-icon" />
-                <span>Savat</span>
+                <span className="cartnav-link">
+                  Savat <span>{cartItems.length}</span>
+                </span>
               </Link>
             </li>
           </ul>

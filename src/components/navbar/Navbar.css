@@ -364,3 +364,15 @@
 .navbar-bottom-links li a:hover {
   color: #007bff;
 }
+
+.cartnav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartnav-link span {
+ padding: 3px 7px;
+ color: white;
+ background: #7000ffff
+}

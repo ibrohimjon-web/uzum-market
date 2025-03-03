@@ -92,3 +92,15 @@
     width: 48%;
   }
 }
+
+.product-heart.liked {
+  color: rgb(255, 0, 8);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.product-heart.like {
+  color: rgb(165, 160, 160);
+  cursor: pointer;
+  transition: color 0.3s;
+}

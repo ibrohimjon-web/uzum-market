@@ -1,19 +1,43 @@
-import "./Product.css";
-import { DATA } from "../../mock/product.js";
 import { CiHeart } from "react-icons/ci";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaHeart } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { incCart } from "../../context/cartSlice.js";
+import { addToWishies, removeFromWishies } from "../../context/likeSlice";
+import { DATA } from "../../mock/product.js";
+import "./Product.css";
 
 const Product = () => {
+  const dispatch = useDispatch();
+  const wishes = useSelector((state) => state.likes.value);
+
+  const handleLike = (item) => {
+    if (wishes.some((el) => el.id === item.id)) {
+      dispatch(removeFromWishies(item));
+    } else {
+      dispatch(addToWishies(item));
+    }
+  };
+
   return (
     <div className="product">
       <div className="container">
         <div className="product-wrapper">
-          {DATA.map((item, index) => {
+          {DATA.map((item) => {
+            const isLiked = wishes.some((el) => el.id === item.id);
             return (
-              <div key={index} className="product-item">
-                <CiHeart className="product-heart" />
-                <img className="product-img" src={item.url} alt={item.model} />
+              <div key={item.id} className="product-item">
+                <FaHeart
+                  className={`product-heart ${isLiked ? "liked" : "like"}`}
+                  onClick={() => handleLike(item)}
+                />
+                <Link to={`product/${item.id}`}>
+                  <img
+                    className="product-img"
+                    src={item.url}
+                    alt={item.model}
+                  />
+                </Link>
                 <Link to={`product/${item.id}`}>
                   <h3>{item.model}</h3>
                   <p>{item.category}</p>
@@ -22,7 +46,10 @@ const Product = () => {
                   <span className="product-price">{item.price}</span>
                 </Link>
                 <div className="product-buy-wrapper">
-                  <FaCartPlus className="product-buy" />
+                  <FaCartPlus
+                    className="product-buy"
+                    onClick={() => dispatch(incCart(item))}
+                  />
                 </div>
               </div>
             );
@@ -30,7 +57,7 @@ const Product = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

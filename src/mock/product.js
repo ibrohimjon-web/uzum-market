@@ -7,9 +7,7 @@ export const DATA = [
     oyiga: 10_000,
     category: "texnika",
     model: "LP12",
-    url: [
-      "https://img.gkbcdn.com/p/2022-02-18/Lenovo-Thinkplus-XT95Pro-TWS-Wireless-Earphone-Luminous-Black-496699-0._w500_p1_.jpg",
-    ],
+    url: ["https://images.uzum.uz/ck58ll4jvf2qegt46pjg/original.jpg"],
   },
   {
     id: 2,
