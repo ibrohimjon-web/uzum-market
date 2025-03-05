@@ -15,6 +15,23 @@
 }
 
 /* Hammasini tanlash checkbox */
+.cart-summary input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cart-summary input:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 8px rgba(106, 13, 173, 0.3);
+}
+
+
 .cart-select-all {
   display: flex;
   align-items: center;
@@ -137,6 +154,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 45%;
+  max-width: 1000px;
   line-height: 1.3;
   text-align: center;
   z-index: 100;
@@ -172,6 +190,3 @@
   }
 
  }
-
-
- 
