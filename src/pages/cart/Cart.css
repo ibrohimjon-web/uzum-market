@@ -189,4 +189,19 @@
     justify-content: center;
   }
 
+  .cart-summary input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .cart-summary h4 {
+    display: none;
+  }
+
  }

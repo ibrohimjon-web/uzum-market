@@ -40,7 +40,7 @@ const Cart = () => {
     const botToken = "7883060261:AAFOYVyk-k_8wYRyVcz_z1SBtKMDqaC-F3s";
     const chatId = "5069790242";
 
-    let message = `\ud83d\uded2 Buyurtma tafsilotlari:\n👤 Ism: ${name}\n👨‍👩‍👧 Familiya: ${surname}\n📍 Manzil: ${location}\n\n`;
+    let message = `🛒 Buyurtma tafsilotlari:\n👤 Ism: ${name}\n👨‍👩‍👧 Familiya: ${surname}\n📍 Manzil: ${location}\n\n`;
 
     selectedItems.forEach((id) => {
       const item = cartItems.find((prod) => prod.id === id);
@@ -79,56 +79,53 @@ const Cart = () => {
               <label>Hammasini tanlash</label>
             </div>
 
-            {cartItems.map(
-              (item) =>
-                item.quantity > 0 && (
-                  <div key={item.id} className="cart-item">
-                    <input
-                      type="checkbox"
-                      checked={selectedItems.includes(item.id)}
-                      onChange={() => handleSelectItem(item.id)}
-                      className="cart-checkbox"
-                    />
-                    <img src={item.url} alt={item.model} className="cart-img" />
-                    <div className="cart-info">
-                      <h3>{item.model}</h3>
-                      <p className="cart-seller">Sotuvchi: {item.seller}</p>
-                      <p className="cart-size">O‘lcham: {item.size}</p>
-                      <div className="cart-price-section">
-                        <span className="cart-price">
-                          {item.price * item.quantity} so'm
-                        </span>
-                        {item.oldPrice && (
-                          <span className="cart-old-price">
-                            {item.oldPrice} so'm
-                          </span>
-                        )}
-                      </div>
-                      <div className="cart-controls">
-                        <button
-                          className="cart-btn"
-                          onClick={() => dispatch(decCart(item))}
-                        >
-                          <FaMinus />
-                        </button>
-                        <span className="cart-quantity">{item.quantity}</span>
-                        <button
-                          className="cart-btn"
-                          onClick={() => dispatch(incCart(item))}
-                        >
-                          <FaPlus />
-                        </button>
-                        <button
-                          className="cart-btn delete"
-                          onClick={() => dispatch(removeCart(item))}
-                        >
-                          <RiDeleteBin5Fill />
-                        </button>
-                      </div>
-                    </div>
+            {cartItems.map((item) => (
+              <div key={item.id} className="cart-item">
+                <input
+                  type="checkbox"
+                  checked={selectedItems.includes(item.id)}
+                  onChange={() => handleSelectItem(item.id)}
+                  className="cart-checkbox"
+                />
+                <img src={item.url} alt={item.model} className="cart-img" />
+                <div className="cart-info">
+                  <h3>{item.model}</h3>
+                  <p className="cart-seller">Sotuvchi: {item.seller}</p>
+                  <p className="cart-size">O‘lcham: {item.size}</p>
+                  <div className="cart-price-section">
+                    <span className="cart-price">
+                      {item.price * item.quantity} so'm
+                    </span>
+                    {item.oldPrice && (
+                      <span className="cart-old-price">
+                        {item.oldPrice} so'm
+                      </span>
+                    )}
                   </div>
-                )
-            )}
+                  <div className="cart-controls">
+                    <button
+                      className="cart-btn"
+                      onClick={() => dispatch(decCart(item))}
+                    >
+                      <FaMinus />
+                    </button>
+                    <span className="cart-quantity">{item.quantity}</span>
+                    <button
+                      className="cart-btn"
+                      onClick={() => dispatch(incCart(item))}
+                    >
+                      <FaPlus />
+                    </button>
+                    <button
+                      className="cart-btn delete"
+                      onClick={() => dispatch(removeCart(item))}
+                    >
+                      <RiDeleteBin5Fill />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
 
             <div className="cart-summary">
               <input
