@@ -87,7 +87,12 @@ const Cart = () => {
                   onChange={() => handleSelectItem(item.id)}
                   className="cart-checkbox"
                 />
-                <img src={item.url} alt={item.model} className="cart-img" />
+                <img
+                  src={item.url}
+                  alt={item.model}
+                  referrerPolicy="no-referrer"
+                  className="cart-img"
+                />
                 <div className="cart-info">
                   <h3>{item.model}</h3>
                   <p className="cart-seller">Sotuvchi: {item.seller}</p>

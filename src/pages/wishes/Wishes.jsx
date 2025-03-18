@@ -31,6 +31,7 @@ const Wishes = () => {
                       className="product-img"
                       src={item.url}
                       alt={item.model}
+                      referrerPolicy="no-referrer"
                     />
                   </Link>
 
