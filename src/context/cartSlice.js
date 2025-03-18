@@ -25,7 +25,7 @@ const cartSlice = createSlice({
         });
       }
       localStorage.setItem("cart", JSON.stringify(state.value));
-      toast.success("Savatga qoshildi Hoshim😘💕");
+      toast.success("Savatga qoshildi");
     },
 
     decCart(state, { payload }) {

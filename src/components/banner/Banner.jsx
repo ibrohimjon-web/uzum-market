@@ -1,6 +1,6 @@
-import "./Banner.css";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "./Banner.css";
 
 import "swiper/css";
 import "swiper/css/navigation";

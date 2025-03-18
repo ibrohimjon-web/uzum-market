@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 export const likeSlice = createSlice({
   name: "Wishies",
@@ -9,6 +10,7 @@ export const likeSlice = createSlice({
     addToWishies(state, action) {
       state.value = [...state.value, action.payload];
       localStorage.setItem("wishes", JSON.stringify(state.value));
+      toast.success("Yoqtirgalaringizga qo'shildi");
     },
     removeFromWishies(state, action) {
       state.value = state.value.filter((el) => el.id !== action.payload.id);
