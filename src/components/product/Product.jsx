@@ -35,6 +35,7 @@ const Product = () => {
                   <img
                     className="product-img"
                     src={item.url}
+                    referrerPolicy="no-referrer"
                     alt={item.model}
                   />
                 </Link>
