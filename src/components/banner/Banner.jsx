@@ -30,6 +30,7 @@ const Banner = () => {
             <SwiperSlide key={index}>
               <img
                 src={img}
+                referrerPolicy="no-referrer"
                 alt={`Banner ${index + 1}`}
                 className="banner-img"
               />
